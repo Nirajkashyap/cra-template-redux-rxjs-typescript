@@ -21,7 +21,7 @@ describe("Sidebar ", () => {
 
     });
 
-    it('Render sidebar if url is not login',() => {
+    it('Render sidebar if url is  login',() => {
         props = {
             pathname:'/search'
         };

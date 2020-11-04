@@ -66,7 +66,7 @@ if(process.env.REACT_APP_SUB_MODULE === "true"){
 
 window['eraseCookieFromAllPaths'] = (name : any) => {
     // This function will attempt to remove a cookie from all paths.
-    const pathBits = location.pathname.split('/');
+    const pathBits = window.location.pathname.split('/');
     let pathCurrent = ' path=';
 
     // do a simple pathless delete first.

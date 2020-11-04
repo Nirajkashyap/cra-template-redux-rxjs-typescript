@@ -8,12 +8,14 @@ import OrgTestPage from './components/OrgTestPage';
 /* tslint:disable:no-string-literal */
 // add all reducer to root reducer
 import  { orgReducer }  from './reducers/Org';
+
+import { fetchGithubOrgEpic } from './epic/org';
 // window['tempStore'] = window['store'].getState();
 window['store'].injectReducer('orgReducer' , orgReducer);
 
 
 // add epic of module
-import { fetchGithubOrgEpic } from './epic/org';
+
 let addEpicFlag = true;
 for (const value of window['epicRegistry']) {
 

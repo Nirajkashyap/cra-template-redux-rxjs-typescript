@@ -99,7 +99,7 @@ export function configureStore(initialState) {
         storeX['asyncReducers'][key] = asyncReducer;
         const newRootReducer = createReducer(storeX['asyncReducers']);
         // console.log(newRootReducer);
-        storeX.replaceReducer(connectRouter(history)(newRootReducer));
+        storeX.replaceReducer(connectRouter(history)(newRootReducer as any));
     };
 
     // Return the modified store
