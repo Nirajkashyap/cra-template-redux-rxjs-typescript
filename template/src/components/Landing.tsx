@@ -62,7 +62,7 @@ export class Landing extends React.Component<IProps, IState> {
         this.props.fetchGithubUserCancel();
     }
 
-    public handleChange(event) {
+    public handleChange(event:any) {
         if (event.target.value) {
             this.setState({hideShow: "hide", githubUserName: event.target.value});
         } else {
@@ -70,7 +70,7 @@ export class Landing extends React.Component<IProps, IState> {
         }
     }
 
-    public handleSubmit(event) {
+    public handleSubmit(event:any) {
         event.preventDefault();
         if (!this.state.githubUserName) {
             this.setState({hideShow: "show"});
@@ -82,7 +82,7 @@ export class Landing extends React.Component<IProps, IState> {
         }
     }
 
-    public componentWillReceiveProps( nextProps) {
+    public componentWillReceiveProps( nextProps:any) {
         console.log(this.props  ,nextProps);
         // nextProps.githubUserLoading flag is used when handleChange is called and will update state but we don't want to call api
         // when handleSubmit is called will update  nextProps.githubUserLoading via action and then updating url that will trigger same cmp

@@ -1,11 +1,11 @@
 import * as React from 'react';
 export default class ErrorBoundary extends React.Component<any,any> {
-  constructor(props) {
+  constructor(props:any) {
     super(props);
     this.state = { error: null, errorInfo: null };
   }
   
-  public componentDidCatch(error, errorInfo) {
+  public componentDidCatch(error:any, errorInfo:any) {
     // Catch errors in any components below and re-render with error message
     this.setState({
       error,

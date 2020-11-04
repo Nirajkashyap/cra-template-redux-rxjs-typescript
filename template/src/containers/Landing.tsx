@@ -4,7 +4,7 @@ import * as githubUseractions from '../actions/GithubUser';
 import * as githubUserRepoactions from '../actions/GithubUserRepos';
 import {Landing} from "../components/Landing";
 
-export function mapStateToProps(state) {
+export function mapStateToProps(state:any) {
     return {
         pathname: state.router.location.pathname,
         search: state.router.location.search,

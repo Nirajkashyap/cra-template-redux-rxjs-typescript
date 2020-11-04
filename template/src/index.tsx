@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import * as react_redux from 'react-redux';
 import * as redux from 'redux';
-import * as reactstrap from 'reactstrap';
+// import * as reactstrap from 'reactstrap';
 import * as qs from 'query-string';
 import * as rxjs from 'rxjs';
 import * as redux_observable from 'redux-observable';
@@ -24,7 +24,7 @@ microFrontendReactV16['ReactDOM'] = ReactDOM;
 microFrontendReactV16['React'] = React;
 microFrontendReactV16['react-redux'] = react_redux;
 microFrontendReactV16['redux'] = redux;
-microFrontendReactV16['reactstrap'] = reactstrap;
+// microFrontendReactV16['reactstrap'] = reactstrap;
 microFrontendReactV16['qs'] = qs;
 microFrontendReactV16['reacthistory'] = history;
 microFrontendReactV16['rxjs'] = rxjs;
@@ -64,7 +64,7 @@ if(process.env.REACT_APP_SUB_MODULE === "true"){
       
 }
 
-window['eraseCookieFromAllPaths'] = (name) => {
+window['eraseCookieFromAllPaths'] = (name : any) => {
     // This function will attempt to remove a cookie from all paths.
     const pathBits = location.pathname.split('/');
     let pathCurrent = ' path=';
@@ -79,7 +79,7 @@ window['eraseCookieFromAllPaths'] = (name) => {
 }
 
 
-window['appendStyle'] =  (styles)=>{
+window['appendStyle'] =  (styles :any)=>{
 
     const head = document.head || document.getElementsByTagName('head')[0];
     const styleTag = document.createElement('style');

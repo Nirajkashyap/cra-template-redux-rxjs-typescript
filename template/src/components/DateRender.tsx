@@ -1,8 +1,8 @@
 import * as React from 'react';
-import * as moment from 'moment';
+import  moment from 'moment';
 
 class DateRender extends React.Component<any, any> {
-    constructor(props) {
+    constructor(props:any) {
         super(props);
         this.state={
             value: moment(this.props.value).format( 'MMM Do YYYY, h:mm:ss a')

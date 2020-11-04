@@ -29,7 +29,7 @@ export const loginEpic = (action$ : any) => {
                                     body : {username:action.user.username,password:action.user.password},
                                     withCredentials : false
                                 },
-                                (response) => {
+                                (response:any) => {
 
                                     console.log(response);
                                     document.cookie = "isLoggedin=true";
@@ -54,7 +54,7 @@ export const fetchGithubUserEpic = (action$ : any) => {
                 url:`${apiLocation()}/users/${action.GithubUserName}`,
                 withCredentials : false,
             },fetchGithubUserFulfilled,
-            (err) => {
+            (err:any) => {
 
                 console.log(err);
                 return concat([{ type : 'FETCH_GITHUB_USER_DETAILS_FAILED'}]);
@@ -73,7 +73,7 @@ export const fetchGithubUserReposEpic = (action$ : any) => {
                 url:`${apiLocation()}/users/${action.GithubUserName}/repos`,
                 withCredentials : false,
             },fetchGithubUserReposFulfilled,
-            (err) => {
+            (err:any) => {
 
                 console.log(err);
                 return concat([{ type : 'FETCH_GITHUB_USER_REPO_FAILED'}]);

@@ -48,7 +48,7 @@ export default class OrgDetails extends React.Component<any, IState> {
         this.props.fetchGithubOrgCancel();
     }
 
-    public handleChange(event) {
+    public handleChange(event:any) {
         if (event.target.value) {
             this.setState({hideShow: "hide", githubOrgName: event.target.value});
         } else {
@@ -56,7 +56,7 @@ export default class OrgDetails extends React.Component<any, IState> {
         }
     }
 
-    public handleSubmit(event) {
+    public handleSubmit(event:any) {
         event.preventDefault();
         if (!this.state.githubOrgName) {
             this.setState({hideShow: "show"});
@@ -70,7 +70,7 @@ export default class OrgDetails extends React.Component<any, IState> {
     }
     
     
-    public componentWillReceiveProps( nextProps) {
+    public componentWillReceiveProps( nextProps:any) {
         console.log(this.props  ,nextProps);
         // nextProps.githubOrgLoading flag is used when handleChange is called and will update state but we don't want to call api
         // when handleSubmit is called will update  nextProps.githubOrgLoading via action and then updating url that will trigger same cmp

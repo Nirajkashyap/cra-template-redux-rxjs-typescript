@@ -8,7 +8,7 @@ import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 import './GithubUserList.scss';
 
 class GithubUserList extends React.Component<any, any> {
-    constructor(props) {
+    constructor(props:any) {
         super(props);
         this.methodFromParent= this.methodFromParent.bind(this);
         // Todo
@@ -32,11 +32,11 @@ class GithubUserList extends React.Component<any, any> {
 
     }
 
-    public componentWillReceiveProps(nextProps) {
+    public componentWillReceiveProps(nextProps:any) {
         this.setState({rowData:nextProps.githubUserRepoList})
     }
 
-    public methodFromParent(cell) {
+    public methodFromParent(cell:any) {
         alert(cell)
         // this.props.history.push('//'+ cell);
     }

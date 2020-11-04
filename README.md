@@ -7,3 +7,12 @@ This is the official base template for [Create React App](https://github.com/Nir
 ```sh
 npx create-react-app my-app --template redux-rxjs-typescript
 ```
+
+update below rules in tsconfig.json
+
+"noImplicitReturns": true,
+"noImplicitThis": true,
+"noImplicitAny": false,
+"strictNullChecks": true,
+"suppressImplicitAnyIndexErrors": true,
+"noUnusedLocals": true,

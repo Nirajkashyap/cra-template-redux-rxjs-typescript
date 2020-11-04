@@ -31,20 +31,20 @@ export default class Login extends React.Component<IProps,any> {
         this.handleTestPage = this.handleTestPage.bind(this);
     }
 
-    public handleChange(event) {
+    public handleChange(event:any) {
 
         if(event.target.value) {
             this.setState({[event.target.id]:event.target.value})
         }
     }
 
-    public handleTestPage(event) {
+    public handleTestPage(event:any) {
         event.preventDefault();
         this.props.history.push('/org/testpage')
         
     }
 
-    public handleSubmit(event) {
+    public handleSubmit(event:any) {
         event.preventDefault();
         
         this.props.login(this.state.username,this.state.password);

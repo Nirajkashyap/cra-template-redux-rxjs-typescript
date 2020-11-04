@@ -25,7 +25,7 @@ export const fetchGithubOrgEpic = (action$ : any) => {
                 url:`${apiLocation()}/orgs/${action.GithubOrgName}`,
                 withCredentials : false,
             },fetchGithubOrgFulfilled,
-            (err) => {
+            (err:any) => {
 
                 console.log(err);
                 return concat([{ type : 'FETCH_GITHUB_ORG_DETAILS_FAILED'}]);
@@ -44,7 +44,7 @@ export const fetchGithubOrgNewEpic = (action$ : any) => {
                 url:`${apiLocation()}/orgs/${action.GithubOrgName}`,
                 withCredentials : false,
             },fetchGithubOrgFulfilled,
-            (err) => {
+            (err:any) => {
 
                 console.log(err);
                 return concat([{ type : 'FETCH_GITHUB_ORG_DETAILS_FAILED'}]);

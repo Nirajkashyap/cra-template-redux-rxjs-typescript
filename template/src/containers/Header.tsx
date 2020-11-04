@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import {Dispatch} from "redux";
 import * as actions from '../actions/';
 
-export function mapStateToProps(state) {
+export function mapStateToProps(state:any) {
     return {
         pathname: state.router.location.pathname,
     };

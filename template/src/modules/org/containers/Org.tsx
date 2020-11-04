@@ -3,7 +3,7 @@ import { Dispatch } from 'redux';
 import * as actions from '../actions/org';
 import OrgDetails from "../components/OrgDetails";
 
-export function mapStateToProps(state) {
+export function mapStateToProps(state:any) {
     return {
         pathname: state.router.location.pathname,
         search: state.router.location.search,

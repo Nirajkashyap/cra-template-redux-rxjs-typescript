@@ -4,7 +4,7 @@ import { Dispatch } from 'redux';
 import * as actions from '../actions/';
 import Login from "../components/Login";
 
-export function mapStateToProps(state) {
+export function mapStateToProps(state:any) {
     return {
         loggedIn:state.loginReducer.loggedIn,
         from : state.loginReducer.from

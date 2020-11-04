@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import SideBar from "../components/SideBar";
 
-export function mapStateToProps(state) {
+export function mapStateToProps(state:any) {
     return {
         pathname: state.router.location.pathname,
     };

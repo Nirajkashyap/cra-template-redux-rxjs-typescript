@@ -1,15 +1,5 @@
 import * as React from 'react';
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
-} from 'reactstrap';
+
 import {history} from '../store/store'
 
 
@@ -47,32 +37,15 @@ export default class Header extends React.Component<any, any> {
         if (this.props.pathname.substring(1) !== 'login') {
             return (
                 <div className="Header-component">
-                    <Navbar color="light" light expand="md">
-                        <NavbarBrand href="/">Github User Repo Dashboard</NavbarBrand>
-                        <NavbarToggler onClick={this.toggle}/>
-                        <Collapse isOpen={this.state.isOpen} navbar>
-                            <Nav className="ml-auto" navbar>
-                                <UncontrolledDropdown nav inNavbar>
-                                    <DropdownToggle nav caret>
-                                        Settings
-                                    </DropdownToggle>
-                                    <DropdownMenu right>
-                                        <DropdownItem onClick={this.logout}>
-                                            Logout
-                                        </DropdownItem>
-                                    </DropdownMenu>
-                                </UncontrolledDropdown>
-                            </Nav>
-                        </Collapse>
-                    </Navbar>
+                    
+                    <div onClick={this.logout}> logout</div>
                 </div>
             );
         } else {
             return (
                 <div>
-                    <Navbar color="light" light expand="md">
-                        <NavbarBrand href="/">Github User Repo Dashboard</NavbarBrand>
-                    </Navbar>
+                    <a href="/">Github User Repo Dashboard</a>
+                   
                 </div>
             );
         }
