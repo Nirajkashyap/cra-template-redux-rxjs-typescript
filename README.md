@@ -1,6 +1,6 @@
 # cra-template-redux-rxjs-typescript
 
-This is the official base template for [Create React App](https://github.com/Nirajkashyap/cra-template-redux-rxjs-typescript).
+This is the official base template for [Create React App with Redux Rxjs Typescript](https://github.com/Nirajkashyap/cra-template-redux-rxjs-typescript).
 
 ## TypeScript
 
@@ -8,11 +8,11 @@ This is the official base template for [Create React App](https://github.com/Nir
 npx create-react-app my-app --template redux-rxjs-typescript
 ```
 
-update below rules in tsconfig.json
+hint : to resolve ts error update below rules in tsconfig.json 
 
-"noImplicitReturns": true,
-"noImplicitThis": true,
-"noImplicitAny": false,
-"strictNullChecks": true,
-"suppressImplicitAnyIndexErrors": true,
+"noImplicitReturns": true,<br>
+"noImplicitThis": true,<br>
+"noImplicitAny": false,<br>
+"strictNullChecks": true,<br>
+"suppressImplicitAnyIndexErrors": true,<br>
 "noUnusedLocals": true,
